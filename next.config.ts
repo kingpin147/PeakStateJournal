@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    // All cover images are SVGs — bypass the image optimizer entirely.
+    // The optimizer cannot process SVG format and will return broken images.
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

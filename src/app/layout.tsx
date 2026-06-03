@@ -97,6 +97,20 @@ export const metadata: Metadata = {
     "executive health",
     "clinical research",
     "anti-aging",
+    "lab tests",
+    "blood work",
+    "vitamins supplements",
+    "sleep optimization",
+    "hormones metabolism",
+    "testosterone",
+    "thyroid health",
+    "insulin resistance",
+    "VO2 max",
+    "mitochondria",
+    "cortisol stress",
+    "circadian rhythm",
+    "personalized medicine",
+    "genetic testing",
   ],
 
   // Site identity for Google
@@ -113,7 +127,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      {/* suppressHydrationWarning prevents false positives from browser
+          extensions that inject attributes onto <body> (e.g. cz-shortcut-listen) */}
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }

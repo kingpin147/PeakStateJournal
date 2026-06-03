@@ -32,4 +32,8 @@ export const CATEGORIES = [
   { id: 'immune-support', label: 'Immunity & Gut Health' },
   { id: 'fitness-metabolic', label: 'Fitness & Metabolism' },
   { id: 'wellness-somatics', label: 'Somatics & Body Wellness' },
+  { id: 'clinical-testing', label: 'Lab Tests & Diagnostics' },
+  { id: 'nutrition-supplements', label: 'Nutrition & Supplements' },
+  { id: 'sleep-recovery', label: 'Sleep & Recovery' },
+  { id: 'hormones-metabolism', label: 'Hormones & Metabolism' },
 ];

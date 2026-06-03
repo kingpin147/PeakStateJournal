@@ -3,10 +3,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
+import {
   Sun, Moon, ArrowLeft, ChevronDown, Menu, X,
   Activity, Brain, Dna, Shield, Zap, Flame, Waves,
-  ArrowRight
+  ArrowRight, FlaskConical, Pill, Moon as MoonIcon, Gauge,
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -70,6 +70,38 @@ const MEGA_MENU_CATEGORIES = [
     color: 'text-cyan-500',
     bg: 'bg-cyan-50 dark:bg-cyan-950/30',
   },
+  {
+    id: 'clinical-testing',
+    label: 'Lab Tests & Diagnostics',
+    description: 'Interpret every blood marker and panel',
+    icon: FlaskConical,
+    color: 'text-blue-500',
+    bg: 'bg-blue-50 dark:bg-blue-950/30',
+  },
+  {
+    id: 'nutrition-supplements',
+    label: 'Nutrition & Supplements',
+    description: 'Evidence-based supplements and nutrition',
+    icon: Pill,
+    color: 'text-lime-500',
+    bg: 'bg-lime-50 dark:bg-lime-950/30',
+  },
+  {
+    id: 'sleep-recovery',
+    label: 'Sleep & Recovery',
+    description: 'Circadian biology and restorative sleep',
+    icon: MoonIcon,
+    color: 'text-indigo-500',
+    bg: 'bg-indigo-50 dark:bg-indigo-950/30',
+  },
+  {
+    id: 'hormones-metabolism',
+    label: 'Hormones & Metabolism',
+    description: 'Thyroid, cortisol, insulin, and testosterone',
+    icon: Gauge,
+    color: 'text-pink-500',
+    bg: 'bg-pink-50 dark:bg-pink-950/30',
+  },
 ];
 
 export default function Header({ showBackButton = false }: HeaderProps) {
@@ -93,7 +125,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
     }
   }, []);
 
-  // Close mega menu on outside click
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
@@ -107,12 +138,9 @@ export default function Header({ showBackButton = false }: HeaderProps) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Close mobile menu on route change / resize
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setMobileMenuOpen(false);
-      }
+      if (window.innerWidth >= 768) setMobileMenuOpen(false);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -141,11 +169,10 @@ export default function Header({ showBackButton = false }: HeaderProps) {
 
   return (
     <>
-      {/* Main Header Bar */}
       <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/40 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between gap-6">
 
-          {/* Left: Logo + Back Button */}
+          {/* Left: Logo */}
           <div className="flex items-center gap-3 shrink-0">
             {showBackButton && (
               <Link
@@ -157,13 +184,15 @@ export default function Header({ showBackButton = false }: HeaderProps) {
               </Link>
             )}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-9 h-9 overflow-hidden rounded-lg bg-primary/5 border border-primary/20 flex items-center justify-center">
+              {/* Logo uses SVG for transparent background */}
+              <div className="relative w-9 h-9 flex items-center justify-center">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.svg"
                   alt="Peak State Journal Logo"
-                  fill
-                  sizes="36px"
-                  className="object-contain p-1"
+                  width={36}
+                  height={36}
+                  className="object-contain"
+                  priority
                 />
               </div>
               <div className="hidden sm:block">
@@ -186,7 +215,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
               Home
             </Link>
 
-            {/* Research Mega Menu Trigger */}
             <div className="relative" onMouseEnter={handleMenuMouseEnter} onMouseLeave={handleMenuMouseLeave}>
               <button
                 ref={triggerRef}
@@ -200,9 +228,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                 aria-haspopup="true"
               >
                 Research Topics
-                <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${megaMenuOpen ? 'rotate-180 text-primary' : ''}`}
-                />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${megaMenuOpen ? 'rotate-180 text-primary' : ''}`} />
               </button>
             </div>
 
@@ -214,7 +240,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
             </Link>
           </nav>
 
-          {/* Right: Theme + Mobile Toggle */}
+          {/* Right: Theme + Mobile */}
           <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={toggleTheme}
@@ -223,8 +249,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
             >
               {darkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4" />}
             </button>
-
-            {/* Mobile hamburger */}
             <button
               onClick={() => setMobileMenuOpen(v => !v)}
               className="md:hidden p-2 rounded-full hover:bg-muted/80 text-muted-foreground hover:text-foreground transition-all cursor-pointer border border-border/40"
@@ -235,20 +259,19 @@ export default function Header({ showBackButton = false }: HeaderProps) {
           </div>
         </div>
 
-        {/* ─── MEGA MENU PANEL (Desktop) ─── */}
+        {/* MEGA MENU */}
         {megaMenuOpen && (
           <div
             ref={megaMenuRef}
             onMouseEnter={handleMenuMouseEnter}
             onMouseLeave={handleMenuMouseLeave}
-            className="absolute left-0 right-0 top-full z-40 border-t border-border/40 bg-background/95 backdrop-blur-xl shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200"
+            className="absolute left-0 right-0 top-full z-40 border-t border-border/40 bg-background/97 backdrop-blur-xl shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200"
           >
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-8">
-              {/* Mega menu header */}
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h2 className="font-bold text-base text-foreground">Research Topics</h2>
-                  <p className="text-xs text-muted-foreground mt-0.5">Browse all 7 clinical research categories</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">Browse all 11 clinical research categories</p>
                 </div>
                 <Link
                   href="/"
@@ -260,7 +283,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                 </Link>
               </div>
 
-              {/* Category Grid */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                 {MEGA_MENU_CATEGORIES.map((cat) => {
                   const Icon = cat.icon;
@@ -286,7 +308,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                   );
                 })}
 
-                {/* CTA Card */}
                 <Link
                   href="/"
                   onClick={() => setMegaMenuOpen(false)}
@@ -295,7 +316,7 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                   <div>
                     <p className="text-xs font-bold text-primary leading-tight">View Full Database</p>
                     <p className="text-[10px] text-muted-foreground mt-1 leading-relaxed">
-                      Search and filter all 31 peer-reviewed articles by category, date, or keyword.
+                      Search and filter all 102 peer-reviewed articles by category, date, or keyword.
                     </p>
                   </div>
                   <div className="mt-4 flex items-center gap-1 text-[10px] font-bold text-primary group-hover:underline">
@@ -304,11 +325,10 @@ export default function Header({ showBackButton = false }: HeaderProps) {
                 </Link>
               </div>
 
-              {/* Bottom bar */}
               <div className="border-t border-border/30 mt-6 pt-4 flex flex-wrap gap-4 text-[10px] text-muted-foreground">
-                <span>31 Peer-Reviewed Articles</span>
+                <span>102 Peer-Reviewed Articles</span>
                 <span>·</span>
-                <span>7 Research Categories</span>
+                <span>11 Research Categories</span>
                 <span>·</span>
                 <span>Academic Citations Included</span>
                 <span>·</span>
@@ -319,11 +339,10 @@ export default function Header({ showBackButton = false }: HeaderProps) {
         )}
       </header>
 
-      {/* ─── MOBILE SLIDE-DOWN MENU ─── */}
+      {/* MOBILE MENU */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 top-16 z-40 bg-background/95 backdrop-blur-lg overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200">
           <div className="px-6 py-6 space-y-4">
-
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
@@ -332,7 +351,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
               Home — All Articles
             </Link>
 
-            {/* Research accordion for mobile */}
             <div className="border border-border/40 rounded-xl bg-card overflow-hidden">
               <button
                 onClick={() => setMobileResearchOpen(v => !v)}
@@ -366,7 +384,6 @@ export default function Header({ showBackButton = false }: HeaderProps) {
               )}
             </div>
 
-            {/* Disclaimer note */}
             <p className="text-[10px] text-muted-foreground text-center px-2 leading-relaxed">
               Educational content only. Always consult a qualified medical professional for health concerns.
             </p>

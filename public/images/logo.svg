@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="peakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="peakGradLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Mountain / peak shape -->
+  <path d="M60 18 L20 82 L100 82 Z" fill="url(#peakGrad)" opacity="0.9"/>
+  <!-- Inner highlight peak -->
+  <path d="M60 28 L36 72 L84 72 Z" fill="url(#peakGradLight)" opacity="0.4"/>
+  <!-- ECG / pulse line crossing the peak -->
+  <polyline points="14,68 28,68 34,56 40,80 46,44 52,74 58,74 64,74 70,54 76,82 84,68 106,68"
+    fill="none" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <!-- Dot on peak -->
+  <circle cx="60" cy="18" r="4" fill="#38bdf8" opacity="0.95"/>
+</svg>

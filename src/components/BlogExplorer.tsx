@@ -5,26 +5,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import {
-  Search,
-  Grid,
-  List,
-  ArrowRight,
-  Clock,
-  Calendar,
-  Filter,
-  Sparkles,
-  BookOpen,
+  Search, Grid, List, ArrowRight, Clock, Calendar, Filter, Sparkles, BookOpen,
 } from 'lucide-react';
 import { Post, CATEGORIES } from '@/lib/types';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
+import HeroBanner from '@/components/HeroBanner';
 
 interface BlogExplorerProps {
   posts: Post[];
 }
 
-// Inner component that reads search params — must be wrapped in <Suspense>
 function BlogExplorerInner({ posts }: BlogExplorerProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -32,34 +24,35 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [mounted, setMounted] = useState(false);
 
-  // Derive selected category directly from URL — no extra state sync needed
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(t);
+  }, []);
+
   const categoryParam = searchParams.get('category') ?? 'all';
   const selectedCategory = CATEGORIES.some(c => c.id === categoryParam) ? categoryParam : 'all';
 
-  // Sort: ?sort=latest always shows newest-first (posts already sorted desc, so this is default)
-  // We still support the param for explicitness
   const sortParam = searchParams.get('sort');
   const basePosts = sortParam === 'latest'
     ? [...posts].sort((a, b) => (a.date > b.date ? -1 : 1))
     : posts;
 
-  // Filter by category + search
   const filteredPosts = basePosts.filter(post => {
+    const q = searchQuery.toLowerCase();
     const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    const matchesCategory =
-      selectedCategory === 'all' || post.category === selectedCategory;
-
+      !q ||
+      post.title.toLowerCase().includes(q) ||
+      post.summary.toLowerCase().includes(q) ||
+      post.tags.some(tag => tag.toLowerCase().includes(q));
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
+  const showHero = searchQuery === '' && selectedCategory === 'all' && !sortParam;
   const featuredPost = posts[0];
 
-  // Update URL when category pill is clicked
   const handleCategoryChange = (categoryId: string) => {
     const params = new URLSearchParams();
     if (categoryId !== 'all') params.set('category', categoryId);
@@ -69,29 +62,31 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
     );
   };
 
-  // Sync URL category param changes (e.g. browser back/forward)
-  useEffect(() => {
-    // nothing extra needed — selectedCategory is derived from searchParams directly
-  }, [searchParams]);
-
   return (
     <div className="min-h-screen flex flex-col font-sans transition-colors duration-300">
-      {/* Top Banner */}
+      {/* Top announcement bar */}
       <div className="bg-primary text-primary-foreground text-xs py-2 px-4 text-center font-medium tracking-wide">
         PEAK STATE JOURNAL — CLINICAL EVIDENCE-BASED LONGEVITY RESEARCH FOR HIGH-PERFORMANCE PROFESSIONALS
       </div>
 
       <Header />
 
-      {/* Featured Hero — only when no filter/search active */}
-      {featuredPost && searchQuery === '' && selectedCategory === 'all' && (
-        <section className="px-6 md:px-12 py-8 max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border border-border/40 rounded-2xl p-6 md:p-8 bg-card shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden">
+      {/* Hero Banner — only on unfiltered homepage */}
+      {showHero && <HeroBanner />}
+
+      {/* Featured Hero card — only when no filter/search */}
+      {featuredPost && showHero && (
+        <section
+          id="database"
+          className={`px-6 md:px-12 py-8 max-w-7xl mx-auto w-full transition-all duration-700 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border border-border/40 rounded-2xl p-6 md:p-8 bg-card shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group">
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-primary" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" />
 
             <div className="lg:col-span-7 flex flex-col justify-center space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold text-primary uppercase tracking-wider">
-                <Sparkles className="w-4 h-4" />
+                <Sparkles className="w-4 h-4 animate-pulse" />
                 Featured Research
               </div>
               <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-foreground leading-tight hover:text-primary transition-colors">
@@ -102,7 +97,7 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {featuredPost.tags.map(tag => (
-                  <span key={tag} className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-secondary text-secondary-foreground">
+                  <span key={tag} className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-secondary text-secondary-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-default">
                     #{tag}
                   </span>
                 ))}
@@ -134,8 +129,9 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
                 alt={featuredPost.title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover hover:scale-105 transition-transform duration-500"
+                className="object-cover hover:scale-105 transition-transform duration-700"
                 priority
+                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
@@ -147,7 +143,9 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
       <main className="flex-1 max-w-7xl mx-auto w-full px-6 md:px-12 py-8 space-y-8">
 
         {/* Title & Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border/40 pb-6">
+        <div
+          className={`flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border/40 pb-6 transition-all duration-700 delay-100 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}
+        >
           <div>
             <h2 className="text-xl md:text-2xl font-bold tracking-tight text-foreground flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-primary" />
@@ -189,7 +187,10 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
         </div>
 
         {/* Category Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-3 scrollbar-none -mx-6 px-6 md:mx-0 md:px-0">
+        <div
+          className={`flex items-center gap-2 overflow-x-auto pb-3 scrollbar-none -mx-6 px-6 md:mx-0 md:px-0 transition-all duration-700 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}
+          style={{ scrollbarWidth: 'none' }}
+        >
           <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1 mr-2 shrink-0">
             <Filter className="w-3 h-3" /> Filter:
           </span>
@@ -199,8 +200,8 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
               onClick={() => handleCategoryChange(category.id)}
               className={`text-xs px-3.5 py-1.5 rounded-full border transition-all shrink-0 cursor-pointer ${
                 selectedCategory === category.id
-                  ? 'bg-primary text-primary-foreground border-primary font-medium'
-                  : 'bg-card text-foreground border-border/40 hover:border-border hover:bg-muted/40'
+                  ? 'bg-primary text-primary-foreground border-primary font-medium shadow-sm'
+                  : 'bg-card text-foreground border-border/40 hover:border-primary/40 hover:bg-primary/5 hover:text-primary'
               }`}
             >
               {category.label}
@@ -208,9 +209,9 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
           ))}
         </div>
 
-        {/* Posts */}
+        {/* Posts Grid / List */}
         {filteredPosts.length === 0 ? (
-          <div className="text-center py-16 border border-dashed border-border/60 rounded-2xl bg-card">
+          <div className="text-center py-16 border border-dashed border-border/60 rounded-2xl bg-card animate-in fade-in duration-300">
             <p className="text-muted-foreground text-sm font-medium">No research reviews match your search or filters.</p>
             <button
               onClick={() => { setSearchQuery(''); handleCategoryChange('all'); }}
@@ -221,8 +222,15 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
           </div>
         ) : viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPosts.map(post => (
-              <Card key={post.slug} className="group relative flex flex-col h-full border border-border/40 bg-card overflow-hidden hover:shadow-md transition-all duration-300 rounded-xl">
+            {filteredPosts.map((post, i) => (
+              <Card
+                key={post.slug}
+                className="group relative flex flex-col h-full border border-border/40 bg-card overflow-hidden hover:shadow-lg transition-all duration-300 rounded-xl hover:-translate-y-0.5"
+                style={{
+                  animationDelay: `${i * 40}ms`,
+                  animation: mounted ? `fadeSlideUp 0.5s ease both ${i * 40}ms` : 'none',
+                }}
+              >
                 <div className="absolute top-3 left-3 z-10 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-background/90 text-foreground border border-border/40 shadow-sm backdrop-blur-sm">
                   {CATEGORIES.find(c => c.id === post.category)?.label.split(' & ')[0] || post.category}
                 </div>
@@ -233,9 +241,10 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
                     alt={post.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-[1.03] transition-all duration-500"
+                    className="object-cover group-hover:scale-[1.05] transition-all duration-700"
+                    unoptimized
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
                 </div>
 
                 <CardHeader className="p-5 pb-2">
@@ -262,7 +271,7 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {post.tags.slice(0, 3).map(tag => (
-                      <span key={tag} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground">
+                      <span key={tag} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground hover:bg-primary/10 hover:text-primary transition-colors">
                         {tag}
                       </span>
                     ))}
@@ -296,12 +305,10 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
                       {CATEGORIES.find(c => c.id === post.category)?.label || post.category}
                     </span>
                     <span className="text-[10px] font-medium text-muted-foreground flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {post.date}
+                      <Calendar className="w-3 h-3" />{post.date}
                     </span>
                     <span className="text-[10px] font-medium text-muted-foreground flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {post.readTime}
+                      <Clock className="w-3 h-3" />{post.readTime}
                     </span>
                   </div>
                   <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors">
@@ -319,10 +326,9 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
                   </div>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="h-8 px-4 rounded-lg bg-primary text-primary-foreground hover:bg-primary/95 text-xs font-semibold flex items-center justify-center gap-1 cursor-pointer transition-all"
+                    className="h-8 px-4 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 text-xs font-semibold flex items-center justify-center gap-1 cursor-pointer transition-all hover:-translate-y-0.5"
                   >
-                    Read
-                    <ArrowRight className="w-3 h-3" />
+                    Read <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
               </div>
@@ -348,12 +354,17 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
           </div>
         </div>
       </footer>
+
+      <style jsx global>{`
+        @keyframes fadeSlideUp {
+          from { opacity: 0; transform: translateY(16px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 }
 
-// Public export wraps in Suspense — required by Next.js when useSearchParams
-// is used inside a statically rendered page
 export default function BlogExplorer(props: BlogExplorerProps) {
   return (
     <Suspense fallback={

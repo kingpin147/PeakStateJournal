@@ -8,6 +8,7 @@ import { getPostBySlug, getAllPosts } from '@/lib/posts';
 import { CATEGORIES } from '@/lib/types';
 import Header from '@/components/Header';
 import ProgressBar from '@/components/ProgressBar';
+import RelatedPosts from '@/components/RelatedPosts';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface PageProps {
@@ -275,6 +276,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               fill
               className="object-cover"
               priority
+              unoptimized
             />
           </div>
 
@@ -327,6 +329,14 @@ export default async function BlogPostPage({ params }: PageProps) {
               Disclaimer: The information in this article is for educational and informational purposes only. It is not intended as medical advice. Always consult a qualified medical professional or doctor for any health-related questions or concerns.
             </p>
           </div>
+
+          {/* Related Posts Carousel */}
+          <RelatedPosts
+            currentSlug={post.slug}
+            currentCategory={post.category}
+            currentTags={post.tags}
+            allPosts={allPosts}
+          />
 
           {/* Navigation links (Next / Prev Post) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-border/40 pt-8 mt-12">
