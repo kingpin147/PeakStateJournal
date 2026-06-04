@@ -100,6 +100,7 @@ const images = [
 
 function generateSVG(img) {
   const { icon, title, grad1, grad2, accent } = img;
+  const escapedTitle = title.replace(/&/g, '&amp;');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -161,8 +162,8 @@ function generateSVG(img) {
   <line x1="80" y1="62" x2="340" y2="62" stroke="${accent}" stroke-opacity="0.25" stroke-width="1"/>
 
   <!-- Main title -->
-  <text x="240" y="285" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="white" opacity="0.95" letter-spacing="-0.5">${title.split(' ').slice(0, 3).join(' ')}</text>
-  <text x="240" y="350" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="${accent}" opacity="0.9" letter-spacing="-0.5">${title.split(' ').slice(3).join(' ') || 'Research'}</text>
+  <text x="240" y="285" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="white" opacity="0.95" letter-spacing="-0.5">${escapedTitle.split(' ').slice(0, 3).join(' ')}</text>
+  <text x="240" y="350" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="${accent}" opacity="0.9" letter-spacing="-0.5">${escapedTitle.split(' ').slice(3).join(' ') || 'Research'}</text>
 
   <!-- Subtitle line -->
   <text x="240" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="white" opacity="0.5" letter-spacing="1">Clinical Evidence-Based Research</text>

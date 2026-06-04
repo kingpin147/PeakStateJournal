@@ -59,7 +59,7 @@
   <line x1="80" y1="62" x2="340" y2="62" stroke="#ddd6fe" stroke-opacity="0.25" stroke-width="1"/>
 
   <!-- Main title -->
-  <text x="240" y="285" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="white" opacity="0.95" letter-spacing="-0.5">Dopamine & Focus</text>
+  <text x="240" y="285" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="white" opacity="0.95" letter-spacing="-0.5">Dopamine &amp; Focus</text>
   <text x="240" y="350" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="#ddd6fe" opacity="0.9" letter-spacing="-0.5">Research</text>
 
   <!-- Subtitle line -->

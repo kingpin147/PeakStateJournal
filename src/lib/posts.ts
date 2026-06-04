@@ -21,6 +21,17 @@ export function getPostBySlug(slug: string): Post | null {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
+    // Validation warnings for developer awareness and SEO safety
+    const missing: string[] = [];
+    if (!data.title) missing.push('title');
+    if (!data.category) missing.push('category');
+    if (!data.date) missing.push('date');
+    if (!data.coverImage) missing.push('coverImage');
+    if (!data.summary) missing.push('summary');
+    if (missing.length > 0) {
+      console.warn(`⚠️  [SEO Warning] Post "${realSlug}" is missing critical frontmatter: ${missing.join(', ')}`);
+    }
+
     return {
       title: data.title || '',
       slug: realSlug,

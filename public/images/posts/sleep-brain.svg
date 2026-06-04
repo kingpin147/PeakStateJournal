@@ -59,7 +59,7 @@
   <line x1="80" y1="62" x2="340" y2="62" stroke="#c4b5fd" stroke-opacity="0.25" stroke-width="1"/>
 
   <!-- Main title -->
-  <text x="240" y="285" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="white" opacity="0.95" letter-spacing="-0.5">Sleep & Brain</text>
+  <text x="240" y="285" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="white" opacity="0.95" letter-spacing="-0.5">Sleep &amp; Brain</text>
   <text x="240" y="350" font-family="system-ui, -apple-system, Georgia, serif" font-size="56" font-weight="800" fill="#c4b5fd" opacity="0.9" letter-spacing="-0.5">Health</text>
 
   <!-- Subtitle line -->

@@ -9,6 +9,7 @@ import { CATEGORIES } from '@/lib/types';
 import Header from '@/components/Header';
 import ProgressBar from '@/components/ProgressBar';
 import RelatedPosts from '@/components/RelatedPosts';
+import Footer from '@/components/Footer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface PageProps {
@@ -421,23 +422,8 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border/40 bg-card py-12 px-6 md:px-12 text-center text-xs text-muted-foreground transition-colors duration-300 mt-16">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-left space-y-1">
-            <h4 className="font-bold text-sm text-foreground">Peak State Journal</h4>
-            <p className="text-xs max-w-sm">
-              An evidence-based resource providing accessible, review-level insights on human healthspan, performance, and longevity.
-            </p>
-          </div>
-          <div className="text-xs md:text-right space-y-1">
-            <p>© {new Date().getFullYear()} Peak State Journal. All rights reserved.</p>
-            <p className="text-[10px] text-muted-foreground max-w-md">
-              Disclaimer: The information provided on this website is for educational purposes only. Always consult a medical professional for personal health concerns.
-            </p>
-          </div>
-        </div>
-      </footer>
+      {/* Centralized Attractive Footer */}
+      <Footer />
     </div>
   );
 }

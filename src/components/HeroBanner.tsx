@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Activity, Brain, Dna, Shield, Zap, Flame } from 'lucide-react';
 
 const STATS = [
@@ -38,8 +39,21 @@ export default function HeroBanner() {
       className="relative overflow-hidden bg-gradient-to-br from-[oklch(0.12_0.03_220)] via-[oklch(0.16_0.04_230)] to-[oklch(0.20_0.05_240)] dark:from-[oklch(0.10_0.03_220)] dark:via-[oklch(0.14_0.04_230)] dark:to-[oklch(0.18_0.05_240)] min-h-[540px] flex items-center"
       aria-label="Peak State Journal — Clinical Longevity Research"
     >
+      {/* Background Image with elegant blend overlays */}
+      <div className="absolute inset-0 z-0 select-none">
+        <Image
+          src="/images/hero-banner.png"
+          alt="Clinical DNA & Longevity Graphic"
+          fill
+          priority
+          className="object-cover opacity-45 dark:opacity-30 mix-blend-screen"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.12_0.03_220)] via-[oklch(0.12_0.03_220)]/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.03_220)] via-[oklch(0.12_0.03_220)]/40 to-transparent" />
+      </div>
+
       {/* Animated gradient orbs */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <div
           className="absolute rounded-full opacity-20 animate-pulse"
           style={{

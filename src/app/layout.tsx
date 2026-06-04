@@ -1,8 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Merriweather } from "next/font/google";
 import "./globals.css";
 
 const BASE_URL = 'https://www.peakstatejournal.com';
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c1445" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +41,14 @@ export const metadata: Metadata = {
   description:
     "A premium, scientific resource for high-income professionals. Explore peer-reviewed articles on longevity, preventive health, nutrigenomics, and executive performance.",
 
-  // Canonical URL for the root
+  // Canonical URL for the root and RSS feed alternates for search consoles
   alternates: {
     canonical: BASE_URL,
+    types: {
+      'application/rss+xml': [
+        { url: `${BASE_URL}/feed.xml`, title: 'Peak State Journal RSS Feed' },
+      ],
+    },
   },
 
   // Open Graph (Facebook, LinkedIn, etc.)

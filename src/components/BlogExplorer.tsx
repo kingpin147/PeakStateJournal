@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense, useTransition } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
@@ -12,6 +12,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
 import HeroBanner from '@/components/HeroBanner';
+import Footer from '@/components/Footer';
 
 interface BlogExplorerProps {
   posts: Post[];
@@ -23,6 +24,8 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
   const pathname = usePathname();
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [filterQuery, setFilterQuery] = useState('');
+  const [isPending, startTransition] = useTransition();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [mounted, setMounted] = useState(false);
 
@@ -40,7 +43,7 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
     : posts;
 
   const filteredPosts = basePosts.filter(post => {
-    const q = searchQuery.toLowerCase();
+    const q = filterQuery.toLowerCase();
     const matchesSearch =
       !q ||
       post.title.toLowerCase().includes(q) ||
@@ -52,6 +55,19 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
 
   const showHero = searchQuery === '' && selectedCategory === 'all' && !sortParam;
   const featuredPost = posts[0];
+
+  const handleSearchChange = (val: string) => {
+    setSearchQuery(val);
+    startTransition(() => {
+      setFilterQuery(val);
+    });
+  };
+
+  const handleReset = () => {
+    setSearchQuery('');
+    setFilterQuery('');
+    handleCategoryChange('all');
+  };
 
   const handleCategoryChange = (categoryId: string) => {
     const params = new URLSearchParams();
@@ -158,12 +174,12 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
 
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
             <div className="relative w-full sm:w-64">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Search className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground transition-all duration-300 ${isPending ? 'animate-spin text-primary' : ''}`} />
               <Input
                 type="text"
                 placeholder="Search database..."
                 value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
+                onChange={e => handleSearchChange(e.target.value)}
                 className="pl-9 h-9 text-xs w-full bg-card"
               />
             </div>
@@ -214,7 +230,7 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
           <div className="text-center py-16 border border-dashed border-border/60 rounded-2xl bg-card animate-in fade-in duration-300">
             <p className="text-muted-foreground text-sm font-medium">No research reviews match your search or filters.</p>
             <button
-              onClick={() => { setSearchQuery(''); handleCategoryChange('all'); }}
+              onClick={handleReset}
               className="text-xs font-semibold text-primary mt-3 hover:underline cursor-pointer"
             >
               Reset Search & Filters
@@ -337,23 +353,8 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border/40 bg-card py-12 px-6 md:px-12 text-center text-xs text-muted-foreground transition-colors duration-300 mt-16">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-left space-y-1">
-            <h4 className="font-bold text-sm text-foreground">Peak State Journal</h4>
-            <p className="text-xs max-w-sm">
-              An evidence-based resource providing accessible, review-level insights on human healthspan, performance, and longevity.
-            </p>
-          </div>
-          <div className="text-xs md:text-right space-y-1">
-            <p>© {new Date().getFullYear()} Peak State Journal. All rights reserved.</p>
-            <p className="text-[10px] text-muted-foreground max-w-md">
-              Disclaimer: The information provided on this website is for educational purposes only. Always consult a medical professional for personal health concerns.
-            </p>
-          </div>
-        </div>
-      </footer>
+      {/* Centralized Attractive Footer */}
+      <Footer />
 
       <style jsx global>{`
         @keyframes fadeSlideUp {
