@@ -3,6 +3,8 @@ import { getAllPosts } from '@/lib/posts';
 import { CATEGORIES } from '@/lib/types';
 import { BASE_URL } from '@/lib/utils';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
 
