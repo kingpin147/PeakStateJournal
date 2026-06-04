@@ -6,10 +6,13 @@ import { BASE_URL } from '@/lib/utils';
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
 
+  const now = new Date();
+  const clampDate = (date: Date) => (date > now ? now : date);
+
   // Find the latest post date to use as modification timestamp for static & category list views
   const latestPostDate = posts.length > 0 
-    ? new Date(posts[0].date) 
-    : new Date('2026-06-04');
+    ? clampDate(new Date(posts[0].date)) 
+    : now;
 
   // Homepage
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -28,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // Find latest post in this specific category
       const categoryPosts = posts.filter(p => p.category === c.id);
       const categoryDate = categoryPosts.length > 0 
-        ? new Date(categoryPosts[0].date) 
+        ? clampDate(new Date(categoryPosts[0].date)) 
         : latestPostDate;
 
       return {
@@ -42,10 +45,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // All blog post URLs
   const postRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: clampDate(new Date(post.date)),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }));
 
   return [...staticRoutes, ...categoryRoutes, ...postRoutes];
 }
+
