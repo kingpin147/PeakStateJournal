@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getAllPosts } from '@/lib/posts';
-
-const BASE_URL = 'https://www.peakstatejournal.com';
+import { BASE_URL } from '@/lib/utils';
 
 function escapeXml(unsafe: string): string {
   return unsafe.replace(/[<>&'"]/g, (c) => {

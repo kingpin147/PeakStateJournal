@@ -1,7 +1,6 @@
 import { getAllPosts } from '@/lib/posts';
 import BlogExplorer from '@/components/BlogExplorer';
-
-const BASE_URL = 'https://www.peakstatejournal.com';
+import { BASE_URL } from '@/lib/utils';
 
 // WebSite + Organization JSON-LD for the homepage
 const websiteJsonLd = {

@@ -6,6 +6,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { Calendar, Clock, BookOpen, ChevronRight, FileText, ExternalLink, ShieldAlert } from 'lucide-react';
 import { getPostBySlug, getAllPosts } from '@/lib/posts';
 import { CATEGORIES } from '@/lib/types';
+import { BASE_URL } from '@/lib/utils';
 import Header from '@/components/Header';
 import ProgressBar from '@/components/ProgressBar';
 import RelatedPosts from '@/components/RelatedPosts';
@@ -25,8 +26,6 @@ export async function generateStaticParams() {
     slug: post.slug,
   }));
 }
-
-const BASE_URL = 'https://www.peakstatejournal.com';
 
 // Generate page-specific metadata for SEO
 export async function generateMetadata({ params }: PageProps) {

@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Merriweather } from "next/font/google";
 import "./globals.css";
-
-const BASE_URL = 'https://www.peakstatejournal.com';
+import { BASE_URL } from '@/lib/utils';
 
 export const viewport: Viewport = {
   themeColor: [

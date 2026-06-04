@@ -1,8 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/posts';
 import { CATEGORIES } from '@/lib/types';
-
-const BASE_URL = 'https://www.peakstatejournal.com';
+import { BASE_URL } from '@/lib/utils';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
