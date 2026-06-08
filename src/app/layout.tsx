@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Merriweather } from "next/font/google";
 import "./globals.css";
 import { BASE_URL } from '@/lib/utils';
+import { Analytics } from "@vercel/analytics/next";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -144,6 +145,7 @@ export default function RootLayout({
           extensions that inject attributes onto <body> (e.g. cz-shortcut-listen) */}
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
+        <Analytics />
       </body>
     </html>
   );
