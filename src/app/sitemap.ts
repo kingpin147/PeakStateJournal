@@ -7,19 +7,13 @@ export const dynamic = 'force-static';
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
 
-  const now = new Date();
-  const clampDate = (date: Date) => (date > now ? now : date);
-
-  // Find the latest post date to use as modification timestamp for static views
-  const latestPostDate = posts.length > 0 
-    ? clampDate(new Date(posts[0].date)) 
-    : now;
+  const fallbackDate = new Date().toISOString().split('T')[0];
 
   // Homepage
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: latestPostDate,
+      lastModified: posts.length > 0 ? posts[0].date : fallbackDate,
       changeFrequency: 'daily',
       priority: 1.0,
     },
@@ -28,8 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // All blog post URLs
   const postRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: clampDate(new Date(post.date)),
-    changeFrequency: 'monthly' as const,
+    lastModified: post.date || fallbackDate,
+    changeFrequency: 'monthly',
     priority: 0.9,
   }));
 

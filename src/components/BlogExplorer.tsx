@@ -18,6 +18,215 @@ interface BlogExplorerProps {
   posts: Post[];
 }
 
+function BlogExplorerStatic({ posts }: BlogExplorerProps) {
+  const featuredPost = posts[0];
+  const showHero = true;
+
+  return (
+    <>
+      {/* Hero Banner */}
+      <HeroBanner />
+
+      {/* Featured Hero card */}
+      {featuredPost && (
+        <section
+          id="database"
+          className="px-6 md:px-12 py-8 max-w-7xl mx-auto w-full opacity-100 translate-y-0"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border border-border/40 rounded-2xl p-6 md:p-8 bg-card shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden group">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-primary" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" />
+
+            <div className="lg:col-span-7 flex flex-col justify-center space-y-4">
+              <div className="flex items-center gap-2 text-xs font-semibold text-primary uppercase tracking-wider">
+                <Sparkles className="w-4 h-4" />
+                Featured Research
+              </div>
+              <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-foreground leading-tight hover:text-primary transition-colors">
+                <Link href={`/blog/${featuredPost.slug}`}>{featuredPost.title}</Link>
+              </h2>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                {featuredPost.summary}
+              </p>
+              <div className="flex flex-wrap gap-2 pt-2">
+                {featuredPost.tags.map(tag => (
+                  <span key={tag} className="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-secondary text-secondary-foreground cursor-default">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center gap-4 pt-4 text-xs text-muted-foreground font-medium">
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-3.5 h-3.5" />
+                  {featuredPost.date}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Clock className="w-3.5 h-3.5" />
+                  {featuredPost.readTime}
+                </span>
+              </div>
+              <div className="pt-2">
+                <Link
+                  href={`/blog/${featuredPost.slug}`}
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary hover:underline group/btn"
+                >
+                  Read Full Article
+                  <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 relative min-h-[220px] md:min-h-[300px] w-full rounded-xl overflow-hidden border border-border/40">
+              <Image
+                src={featuredPost.coverImage}
+                alt={featuredPost.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                priority
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Main Database */}
+      <main className="flex-1 max-w-7xl mx-auto w-full px-6 md:px-12 py-8 space-y-8">
+        {/* Title & Controls */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border/40 pb-6">
+          <div>
+            <h2 className="text-xl md:text-2xl font-bold tracking-tight text-foreground flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-primary" />
+              Longevity Research Database
+            </h2>
+            <p className="text-xs text-muted-foreground mt-1">
+              Showing {posts.length} clinical reviews across {CATEGORIES.length - 1} categories.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+            <div className="relative w-full sm:w-64">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Search database..."
+                value=""
+                readOnly
+                className="pl-9 h-9 text-xs w-full bg-card"
+              />
+            </div>
+            <div className="flex items-center border border-border/40 rounded-lg p-0.5 bg-card">
+              <div className="p-1.5 rounded-md bg-primary text-primary-foreground shadow-sm">
+                <Grid className="w-4 h-4" />
+              </div>
+              <div className="p-1.5 rounded-md text-muted-foreground">
+                <List className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Category Pills */}
+        <div
+          className="flex items-center gap-2 overflow-x-auto pb-3 scrollbar-none -mx-6 px-6 md:mx-0 md:px-0"
+          style={{ scrollbarWidth: 'none' }}
+        >
+          <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1 mr-2 shrink-0">
+            <Filter className="w-3 h-3" /> Filter:
+          </span>
+          {CATEGORIES.map(category => (
+            <Link
+              key={category.id}
+              href={category.id === 'all' ? '/' : `/?category=${category.id}`}
+              className={`text-xs px-3.5 py-1.5 rounded-full border transition-all shrink-0 ${
+                category.id === 'all'
+                  ? 'bg-primary text-primary-foreground border-primary font-medium shadow-sm'
+                  : 'bg-card text-foreground border-border/40 hover:border-primary/40 hover:bg-primary/5 hover:text-primary'
+              }`}
+            >
+              {category.label}
+            </Link>
+          ))}
+        </div>
+
+        {/* Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((post) => (
+            <Card
+              key={post.slug}
+              className="group relative flex flex-col h-full border border-border/40 bg-card overflow-hidden hover:shadow-lg transition-all duration-300 rounded-xl hover:-translate-y-0.5"
+            >
+              <div className="absolute top-3 left-3 z-10 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-background/90 text-foreground border border-border/40 shadow-sm backdrop-blur-sm">
+                {CATEGORIES.find(c => c.id === post.category)?.label.split(' & ')[0] || post.category}
+              </div>
+
+              <div className="relative w-full h-44 overflow-hidden bg-muted">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-[1.05] transition-all duration-700"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+              </div>
+
+              <CardHeader className="p-5 pb-2">
+                <div className="flex items-center gap-3 text-[10px] text-muted-foreground font-semibold uppercase tracking-wider mb-1">
+                  <span className="flex items-center gap-1">
+                    <Calendar className="w-3 h-3" />
+                    {post.date}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    {post.readTime}
+                  </span>
+                </div>
+                <CardTitle className="text-base font-bold text-foreground leading-snug group-hover:text-primary transition-colors min-h-[46px] line-clamp-2">
+                  <Link href={`/blog/${post.slug}`} className="hover:underline">
+                    {post.title}
+                  </Link>
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="p-5 pt-0 pb-3 flex-1 flex flex-col justify-between">
+                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3 mb-4">
+                  {post.summary}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {post.tags.slice(0, 3).map(tag => (
+                    <span key={tag} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground hover:bg-primary/10 hover:text-primary transition-colors">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+
+              <CardFooter className="p-5 pt-0 border-t border-border/30 mt-auto flex items-center justify-between">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="text-xs font-bold text-primary group-hover:underline flex items-center gap-1.5"
+                >
+                  View Research
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+                {post.citations && post.citations.length > 0 && (
+                  <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest bg-muted/60 px-1.5 py-0.5 rounded border border-border/20">
+                    {post.citations.length} Ref{post.citations.length === 1 ? '' : 's'}
+                  </span>
+                )}
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </main>
+    </>
+  );
+}
+
 function BlogExplorerInner({ posts }: BlogExplorerProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -79,14 +288,7 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans transition-colors duration-300">
-      {/* Top announcement bar */}
-      <div className="bg-primary text-primary-foreground text-xs py-2 px-4 text-center font-medium tracking-wide">
-        PEAK STATE JOURNAL — CLINICAL EVIDENCE-BASED LONGEVITY RESEARCH FOR HIGH-PERFORMANCE PROFESSIONALS
-      </div>
-
-      <Header />
-
+    <>
       {/* Hero Banner — only on unfiltered homepage */}
       {showHero && <HeroBanner />}
 
@@ -353,27 +555,31 @@ function BlogExplorerInner({ posts }: BlogExplorerProps) {
         )}
       </main>
 
-      {/* Centralized Attractive Footer */}
-      <Footer />
-
       <style jsx global>{`
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(16px); }
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
-    </div>
+    </>
   );
 }
 
 export default function BlogExplorer(props: BlogExplorerProps) {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="text-muted-foreground text-sm">Loading database...</div>
+    <div className="min-h-screen flex flex-col font-sans transition-colors duration-300">
+      {/* Top announcement bar */}
+      <div className="bg-primary text-primary-foreground text-xs py-2 px-4 text-center font-medium tracking-wide">
+        PEAK STATE JOURNAL — CLINICAL EVIDENCE-BASED LONGEVITY RESEARCH FOR HIGH-PERFORMANCE PROFESSIONALS
       </div>
-    }>
-      <BlogExplorerInner {...props} />
-    </Suspense>
+
+      <Header />
+
+      <Suspense fallback={<BlogExplorerStatic {...props} />}>
+        <BlogExplorerInner {...props} />
+      </Suspense>
+
+      <Footer />
+    </div>
   );
 }
