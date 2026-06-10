@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/meditation-brain-neuroscience</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/meditation-brain.svg</image:loc>
+      <image:title><![CDATA[Meditation and the Brain: What Neuroscience Shows]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/yoga-longevity-flexibility-science</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/yoga-flexibility.svg</image:loc>
+      <image:title><![CDATA[Yoga and Longevity: What the Flexibility Science Shows]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/weight-loss-science-metabolism</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/weight-loss.svg</image:loc>
+      <image:title><![CDATA[Weight Loss and Metabolism: What the Science Actually Says]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/dietary-supplements-guide</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vitamins-supplements.svg</image:loc>
+      <image:title><![CDATA[The Evidence-Based Dietary Supplements Guide for 2025]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/fasting-autophagy-cellular-cleanup</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/fasting-autophagy.svg</image:loc>
+      <image:title><![CDATA[Fasting and Autophagy: The Science of Cellular Self-Cleaning]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/understanding-leaky-gut-chronic-inflammation</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/leaky-gut.svg</image:loc>
+      <image:title><![CDATA[Leaky Gut and Chronic Inflammation: The Evidence-Based Overview]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/heart-attack-prevention-essential-tests</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/blood-pressure.svg</image:loc>
+      <image:title><![CDATA[Heart Attack Prevention: The Essential Tests to Get Before Age 50]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/sauna-benefits-heat-heart-cells</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/sauna-heat.svg</image:loc>
+      <image:title><![CDATA[Sauna Benefits: The Evidence for Heart Health and Cellular Repair]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/pre-diabetes-catching-sugar-problems-early</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/blood-sugar.svg</image:loc>
+      <image:title><![CDATA[Pre-Diabetes: Catching Blood Sugar Problems Before They Progress]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/biological-age-measuring-true-aging</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/biological-age.svg</image:loc>
+      <image:title><![CDATA[Biological Age: How to Measure Your True Rate of Aging]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/sleep-brain-deep-sleep-cleaning</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/sleep-brain.svg</image:loc>
+      <image:title><![CDATA[Sleep and the Brain: How Deep Sleep Cleans Your Mind]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/common-medicine-longevity-metformin</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/metformin.svg</image:loc>
+      <image:title><![CDATA[Metformin and Longevity: What the Research Actually Shows]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/keeping-brain-sharp-early-memory-changes</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/brain-diet.svg</image:loc>
+      <image:title><![CDATA[Keeping Your Brain Sharp: Early Signs of Cognitive Decline]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/strength-training-benefits-myokines</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/strength-training.svg</image:loc>
+      <image:title><![CDATA[Strength Training Benefits: The Myokine Revolution in Exercise Science]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/dna-medicine-how-pills-work</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/dna-medicine.svg</image:loc>
+      <image:title><![CDATA[DNA Medicine: How Your Genes Determine Drug Response]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/heart-rate-variability-stress-energy</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/hrv-stress.svg</image:loc>
+      <image:title><![CDATA[Heart Rate Variability: Your Window Into Stress and Recovery]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/somatic-breathwork-simple-breathing</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/breathwork.svg</image:loc>
+      <image:title><![CDATA[Somatic Breathwork: Simple Breathing Techniques with Clinical Benefits]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/keeping-immune-system-young</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/immune-aging.svg</image:loc>
+      <image:title><![CDATA[Keeping Your Immune System Young: Evidence-Based Strategies]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/kidney-health-simple-urine-test</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/kidney-test.svg</image:loc>
+      <image:title><![CDATA[Kidney Health: What a Simple Urine Test Reveals]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/living-longer-science-slowing-aging</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/longevity.svg</image:loc>
+      <image:title><![CDATA[The Science of Living Longer: How to Slow Biological Aging]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/eating-brain-health-alzheimers-prevention</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/brain-diet.svg</image:loc>
+      <image:title><![CDATA[Diet and Brain Health: Evidence-Based Alzheimer's Prevention]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/blood-sugar-monitor-healthy-people</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/blood-sugar.svg</image:loc>
+      <image:title><![CDATA[Why Healthy People Should Monitor Blood Sugar]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/checking-heart-early-warning-signs</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/hrv-stress.svg</image:loc>
+      <image:title><![CDATA[Early Warning Signs of Heart Disease: What to Check Now]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/dopamine-detox-resetting-focus</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/dopamine-focus.svg</image:loc>
+      <image:title><![CDATA[Dopamine Detox: Resetting Your Brain's Reward System]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/sleep-sunlight-aligning-body-clock</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/sleep-sunlight.svg</image:loc>
+      <image:title><![CDATA[Sunlight, Darkness, and Sleep: Aligning Your Body Clock]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/boosting-energy-nad-cellular-power</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/nad-energy.svg</image:loc>
+      <image:title><![CDATA[NAD+ and Cellular Energy: The Science of Mitochondrial Power]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/folate-b-vitamins-genes-energy</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/folate-b.svg</image:loc>
+      <image:title><![CDATA[Folate, B Vitamins & Genetics: The MTHFR Connection]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/good-fats-gut-fiber-benefits</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/good-fats-fiber.svg</image:loc>
+      <image:title><![CDATA[Healthy Fats and Dietary Fiber: The Evidence for Gut and Heart Health]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/red-light-therapy-boosting-energy</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/red-light.svg</image:loc>
+      <image:title><![CDATA[Red Light Therapy: Evidence for Energy, Recovery, and Skin]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/understanding-burnout-stress-focus</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/burnout-stress.svg</image:loc>
+      <image:title><![CDATA[Understanding Burnout: The Neuroscience of Chronic Stress and Recovery]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/vo2-max-explained-long-life</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vo2max.svg</image:loc>
+      <image:title><![CDATA[VO2 Max Explained: Why It's the Best Predictor of Long Life]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/science-zombie-cells-stay-young</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/senescent-cells.svg</image:loc>
+      <image:title><![CDATA[Zombie Cells (Senescent Cells): The Science of Staying Young]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/gut-health-mind-connection</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/gut-brain.svg</image:loc>
+      <image:title><![CDATA[The Gut-Brain Connection: How Your Microbiome Shapes Mental Health]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/zone-2-cardio-energy-metabolism</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/zone2-training.svg</image:loc>
+      <image:title><![CDATA[Zone 2 Cardio and Energy Metabolism: The Science of Fat Burning]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/cold-plunges-benefits-cold-therapy</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/cold-therapy.svg</image:loc>
+      <image:title><![CDATA[Cold Plunge Benefits: A Data-Driven Review of Cold Water Immersion]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/role-of-magnesium-body-systems</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/magnesium.svg</image:loc>
+      <image:title><![CDATA[The Role of Magnesium in the Body: Every System It Affects]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/foods-rich-essential-vitamins-minerals</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/diet-foods.svg</image:loc>
+      <image:title><![CDATA[Foods Rich in Essential Vitamins & Minerals: A Clinical Reference]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/common-nutrient-deficiencies-signs</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/nutrients-deficiency.svg</image:loc>
+      <image:title><![CDATA[Common Nutrient Deficiencies: Signs Your Body Is Sending You]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/best-time-take-vitamins-supplements</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vitamins-supplements.svg</image:loc>
+      <image:title><![CDATA[Best Time to Take Vitamins & Supplements: A Clinical Guide]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/fat-soluble-vs-water-soluble-vitamins</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/fat-vitamins.svg</image:loc>
+      <image:title><![CDATA[Fat-Soluble vs Water-Soluble Vitamins: Key Differences Explained]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/multivitamin-evidence-who-needs-one</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/multivitamin.svg</image:loc>
+      <image:title><![CDATA[Multivitamin Evidence: Who Needs One and Who Doesn't]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/vitamin-b12-deficiency-symptoms-testing</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vitamin-b12.svg</image:loc>
+      <image:title><![CDATA[Vitamin B12 Deficiency Testing: What Labs to Order and Why]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/vitamin-a-vision-immune-skin</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vitamin-a.svg</image:loc>
+      <image:title><![CDATA[Vitamin A for Vision, Immunity, and Skin: A Clinical Review]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/vitamin-c-immune-collagen-science</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vitamin-c.svg</image:loc>
+      <image:title><![CDATA[Vitamin C, Immunity, and Collagen: The Complete Science]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/calcium-bone-health-beyond-dairy</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/calcium-bone.svg</image:loc>
+      <image:title><![CDATA[Calcium & Bone Health: The Science Beyond Dairy]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/uric-acid-gout-metabolic-risk</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/uric-acid.svg</image:loc>
+      <image:title><![CDATA[Uric Acid, Gout, and Metabolic Risk: Beyond Joint Pain]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/magnesium-deficiency-health-effects</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/magnesium.svg</image:loc>
+      <image:title><![CDATA[Magnesium Deficiency: The Widespread Mineral Shortage Affecting Your Health]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/fatty-liver-nafld-reversal</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/fatty-liver.svg</image:loc>
+      <image:title><![CDATA[Fatty Liver Disease (NAFLD): How to Reverse It Naturally]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/common-medical-blood-tests-guide</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/blood-tests.svg</image:loc>
+      <image:title><![CDATA[Common Medical Blood Tests: What Every Result Means]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/compare-hba1c-fasting-blood-sugar</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/hba1c-test.svg</image:loc>
+      <image:title><![CDATA[HbA1c vs Fasting Glucose: Which Test Tells You More?]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/importance-vitamin-d-screening</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vitamin-d-test.svg</image:loc>
+      <image:title><![CDATA[Vitamin D Screening: Why Testing Matters More Than You Think]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/understanding-thyroid-function-test-results</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/thyroid-test.svg</image:loc>
+      <image:title><![CDATA[Understanding Thyroid Function Test Results: A Patient Guide]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/diagnostic-tests-iron-deficiency</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/iron-ferritin.svg</image:loc>
+      <image:title><![CDATA[Diagnosing Iron Deficiency: The Tests You Actually Need]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/preparation-blood-tests-fasting-guide</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/blood-tests.svg</image:loc>
+      <image:title><![CDATA[How to Prepare for Blood Tests: The Complete Fasting Guide]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/cholesterol-vs-lipid-profile-difference</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/cholesterol.svg</image:loc>
+      <image:title><![CDATA[Cholesterol vs Full Lipid Profile: What Your Doctor Should Order]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/routine-health-checkup-tests-guide</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/blood-tests.svg</image:loc>
+      <image:title><![CDATA[Routine Health Checkup Tests: The Complete Annual Panel Guide]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/fasting-blood-glucose-insulin-testing</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/fasting-glucose.svg</image:loc>
+      <image:title><![CDATA[Fasting Glucose & Insulin Testing: Interpreting Your Results]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/kidney-function-tests-creatinine-egfr</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/kidney-test.svg</image:loc>
+      <image:title><![CDATA[Kidney Function Tests: Understanding Creatinine, eGFR, and BUN]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/thyroid-profile-full-panel-guide</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/thyroid-test.svg</image:loc>
+      <image:title><![CDATA[The Full Thyroid Panel: TSH, T3, T4, and Antibodies Explained]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/vitamin-d-test-optimal-levels</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vitamin-d-test.svg</image:loc>
+      <image:title><![CDATA[Vitamin D Testing: Optimal Levels and What Your Result Means]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/iron-profile-ferritin-testing</loc>
+    <lastmod>2026-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/iron-ferritin.svg</image:loc>
+      <image:title><![CDATA[Iron Profile & Ferritin Testing: The Complete Interpretation Guide]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/lipid-profile-beyond-cholesterol</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/cholesterol.svg</image:loc>
+      <image:title><![CDATA[Beyond Cholesterol: Getting the Full Lipid Profile]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/liver-function-tests-explained</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/liver-test.svg</image:loc>
+      <image:title><![CDATA[Liver Function Tests Explained: ALT, AST, GGT, and More]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/complete-blood-count-interpretation</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/cbc-test.svg</image:loc>
+      <image:title><![CDATA[Complete Blood Count (CBC): A Comprehensive Guide to Interpretation]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/hemoglobin-a1c-complete-guide</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/hba1c-test.svg</image:loc>
+      <image:title><![CDATA[Hemoglobin A1c: The Complete Guide to Understanding Your Score]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/gut-permeability-autoimmune-connection</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/leaky-gut.svg</image:loc>
+      <image:title><![CDATA[Gut Permeability and Autoimmune Disease: The Leaky Gut Evidence]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/posture-back-pain-sedentary-fix</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/posture-body.svg</image:loc>
+      <image:title><![CDATA[Posture, Back Pain, and the Sedentary Fix: What the Evidence Shows]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/zone-2-training-mitochondria</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/zone2-training.svg</image:loc>
+      <image:title><![CDATA[Zone 2 Training and Mitochondrial Health: The Foundation of Metabolic Fitness]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/immune-senescence-aging-immunity</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/immune-aging.svg</image:loc>
+      <image:title><![CDATA[Immune Senescence: How Your Immune System Ages and What to Do]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/sugar-hidden-sources-metabolic-damage</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/sugar-damage.svg</image:loc>
+      <image:title><![CDATA[Hidden Sugar Sources and Metabolic Damage: What You're Not Seeing]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/testosterone-optimization-men</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/testosterone.svg</image:loc>
+      <image:title><![CDATA[Testosterone Optimization in Men: What Actually Works]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/plant-based-diet-benefits-limits</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/plant-based.svg</image:loc>
+      <image:title><![CDATA[Plant-Based Diet: Evidence-Based Benefits and Real Limitations]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/thyroid-function-energy-metabolism</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/thyroid-hormones.svg</image:loc>
+      <image:title><![CDATA[Thyroid Function and Energy Metabolism: Understanding the Connection]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/cancer-prevention-lifestyle-factors</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/cancer-prevention.svg</image:loc>
+      <image:title><![CDATA[Cancer Prevention: Lifestyle Factors with the Strongest Evidence]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/heat-therapy-infrared-sauna-benefits</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/sauna-heat.svg</image:loc>
+      <image:title><![CDATA[Heat Therapy & Infrared Sauna: Clinical Benefits and Evidence]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/alcohol-health-effects-evidence</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/alcohol-health.svg</image:loc>
+      <image:title><![CDATA[Alcohol & Health: What the Evidence Actually Shows]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/genetic-testing-health-optimization</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/genetic-testing.svg</image:loc>
+      <image:title><![CDATA[Genetic Testing for Health Optimization: What You Actually Learn]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/cold-exposure-hormesis-adaptation</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/cold-therapy.svg</image:loc>
+      <image:title><![CDATA[Cold Exposure & Hormesis: How Cold Stress Strengthens Biology]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/micronutrient-deficiencies-fatigue</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/nutrients-deficiency.svg</image:loc>
+      <image:title><![CDATA[Micronutrient Deficiencies and Fatigue: The Hidden Connections]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/strength-training-after-40</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/strength-training.svg</image:loc>
+      <image:title><![CDATA[Strength Training After 40: The Science of Building Muscle as You Age]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/insulin-resistance-early-warning</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/insulin-resistance.svg</image:loc>
+      <image:title><![CDATA[Insulin Resistance: Early Warning Signs and How to Reverse It]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/breathwork-nervous-system-reset</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/breathwork.svg</image:loc>
+      <image:title><![CDATA[Breathwork for Nervous System Reset: Clinical Evidence]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/telomeres-aging-lifestyle-protection</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/telomeres.svg</image:loc>
+      <image:title><![CDATA[Telomeres and Aging: How Lifestyle Protects Your DNA]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/blood-pressure-arterial-health-guide</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/blood-pressure.svg</image:loc>
+      <image:title><![CDATA[Blood Pressure & Arterial Health: Your Complete Clinical Guide]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/stress-cortisol-adrenal-function</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/cortisol-stress.svg</image:loc>
+      <image:title><![CDATA[Stress, Cortisol, and Adrenal Function: What the Science Shows]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/creatine-cognitive-physical-performance</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/creatine.svg</image:loc>
+      <image:title><![CDATA[Creatine: The Evidence for Cognitive and Physical Performance]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/mindfulness-anxiety-clinical-evidence</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/mindfulness.svg</image:loc>
+      <image:title><![CDATA[Mindfulness for Anxiety: What Clinical Trials Actually Show]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/omega-3-brain-heart-science</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/omega3.svg</image:loc>
+      <image:title><![CDATA[Omega-3 Fatty Acids: The Science for Brain and Heart Health]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/inflammation-silent-killer-chronic-disease</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/inflammation.svg</image:loc>
+      <image:title><![CDATA[Chronic Inflammation: The Silent Driver of Modern Disease]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/protein-muscle-aging-sarcopenia</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/protein-muscle.svg</image:loc>
+      <image:title><![CDATA[Protein, Muscle, and Aging: Preventing Sarcopenia]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/sleep-quality-circadian-rhythm-optimization</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/sleep-circadian.svg</image:loc>
+      <image:title><![CDATA[Sleep Architecture: Optimizing Your Circadian Rhythm for Peak Performance]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/gut-microbiome-diet-diversity</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/gut-microbiome.svg</image:loc>
+      <image:title><![CDATA[Your Gut Microbiome: Why Diversity Is Your Greatest Health Asset]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/vitamin-d-immune-function-sun</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vitamin-d.svg</image:loc>
+      <image:title><![CDATA[Vitamin D, Immunity, and Sun Exposure: The Research Overview]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/mental-health-executive-performance</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/executive-mental.svg</image:loc>
+      <image:title><![CDATA[Mental Health and Executive Performance: The High-Performer's Guide]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/physical-fitness-longevity-exercise-science</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/vo2max.svg</image:loc>
+      <image:title><![CDATA[Physical Fitness and Longevity: What Exercise Science Tells Us]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/healthy-diet-principles-longevity</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/healthy-diet.svg</image:loc>
+      <image:title><![CDATA[Dietary Principles for Longevity: What the Evidence Says]]></image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://peak-state-journal.vercel.app/blog/intermittent-fasting-complete-guide</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peak-state-journal.vercel.app/images/posts/fasting-autophagy.svg</image:loc>
+      <image:title><![CDATA[Intermittent Fasting: The Complete Evidence-Based Guide]]></image:title>
+    </image:image>
+  </url>
+</urlset>
