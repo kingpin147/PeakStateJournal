@@ -1,6 +1,16 @@
+import { Metadata } from 'next';
 import { getAllPosts } from '@/lib/posts';
 import BlogExplorer from '@/components/BlogExplorer';
 import { BASE_URL } from '@/lib/utils';
+
+export const metadata: Metadata = {
+  title: 'Peak State Journal | Clinical & Data-Driven Longevity Research',
+  description:
+    'A premium, scientific resource for high-performance professionals. Explore peer-reviewed articles on longevity, preventive health, nutrigenomics, and executive performance.',
+  alternates: {
+    canonical: BASE_URL,
+  },
+};
 
 // WebSite + Organization JSON-LD for the homepage
 const websiteJsonLd = {

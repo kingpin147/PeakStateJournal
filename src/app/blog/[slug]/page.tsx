@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: PageProps) {
     return { title: 'Post Not Found' };
   }
 
+  const categoryLabel = CATEGORIES.find(c => c.id === post.category)?.label || post.category;
   const canonicalUrl = `${BASE_URL}/blog/${post.slug}`;
   const ogImage = post.coverImage.startsWith('http')
     ? post.coverImage
@@ -61,7 +62,7 @@ export async function generateMetadata({ params }: PageProps) {
       publishedTime: post.date,
       modifiedTime: post.date,
       authors: ['Peak State Editorial Board'],
-      section: post.category,
+      section: categoryLabel,
       tags: post.tags,
       images: [
         {
@@ -97,7 +98,7 @@ export async function generateMetadata({ params }: PageProps) {
     },
 
     // Article-specific keywords
-    keywords: post.tags,
+    keywords: [post.category, categoryLabel, ...post.tags],
   };
 }
 
