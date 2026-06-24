@@ -68,8 +68,13 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/sitemap" className="hover:text-primary transition-colors flex items-center gap-1">
+                HTML Sitemap
+              </Link>
+            </li>
+            <li>
               <a href="/sitemap.xml" target="_blank" className="hover:text-primary transition-colors flex items-center gap-0.5">
-                Sitemap <ArrowUpRight className="w-3 h-3 text-muted-foreground/45" />
+                XML Sitemap <ArrowUpRight className="w-3 h-3 text-muted-foreground/45" />
               </a>
             </li>
           </ul>
