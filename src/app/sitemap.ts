@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/posts';
 import { BASE_URL } from '@/lib/utils';
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   try {
     const posts = getAllPosts();
     
